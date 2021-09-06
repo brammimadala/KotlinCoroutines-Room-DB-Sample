@@ -25,4 +25,7 @@ interface BaseDao<T> {
     @Delete
     fun delete(obj: T):Int
 
+    /*@Delete
+    suspend fun delete(obj: T):Int*/
+
 }

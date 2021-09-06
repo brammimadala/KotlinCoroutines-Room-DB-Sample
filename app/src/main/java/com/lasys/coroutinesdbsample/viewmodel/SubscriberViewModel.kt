@@ -8,10 +8,14 @@ import androidx.lifecycle.viewModelScope
 import com.lasys.coroutinesdbsample.Event
 import com.lasys.coroutinesdbsample.db.entity.Subscriber
 import com.lasys.coroutinesdbsample.repository.SubscriberRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SubscriberViewModel(private val repository: SubscriberRepository) : ViewModel() {
+@HiltViewModel
+class SubscriberViewModel @Inject constructor(private val repository: SubscriberRepository) : ViewModel() {
 
     val subscribers = repository.subscribers
     private var isUpdateOrDelete = false

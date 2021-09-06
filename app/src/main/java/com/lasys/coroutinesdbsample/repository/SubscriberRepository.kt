@@ -2,8 +2,9 @@ package com.lasys.coroutinesdbsample.repository
 
 import com.lasys.coroutinesdbsample.db.entity.Subscriber
 import com.lasys.rxjavasampledb.db.dao.SubscriberDAO
+import javax.inject.Inject
 
-class SubscriberRepository(private val dao: SubscriberDAO) {
+class SubscriberRepository @Inject constructor(private val dao: SubscriberDAO) {
 
     val subscribers = dao.getAllSubscribers()
 
