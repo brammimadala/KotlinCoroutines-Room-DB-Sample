@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lasys.coroutinesdbsample.adapter.SubscribersAdapter
 import com.lasys.coroutinesdbsample.databinding.ActivityMainBinding
